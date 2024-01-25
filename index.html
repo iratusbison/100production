@@ -350,37 +350,57 @@
             <div class="col-lg-8">
                 <div class="bg-light text-center p-5">
                     <h1 class="mb-4">Book Your Photography Session</h1>
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <select class="form-select border-0" style="height: 55px;">
-                                    <option selected>Select A Photography Service</option>
-                                    <option value="1">Event Photography</option>
-                                    <option value="2">Photoshoot Services</option>
-                                    <option value="3">Special Events Coverage</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="date" id="date1" data-target-input="nearest">
-                                    <input type="text"
-                                        class="form-control border-0 datetimepicker-input"
-                                        placeholder="Session Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <textarea class="form-control border-0" placeholder="Additional Requests"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
-                            </div>
-                        </div>
-                    </form>
+                    <form
+  action="https://formspree.io/f/meqyezak"
+  method="POST"
+>
+  <div class="row g-3">
+    <div class="col-12 col-sm-6">
+      <label>
+        Your Name:
+        <input type="text" name="name" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+      </label>
+    </div>
+    <div class="col-12 col-sm-6">
+      <label>
+        Your Email:
+        <input type="email" name="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+      </label>
+    </div>
+    <div class="col-12 col-sm-6">
+      <label>
+        Select A Photography Service:
+        <select name="service" class="form-select border-0" style="height: 55px;">
+          <option selected>Select A Photography Service</option>
+          <option value="Event Photography">Event Photography</option>
+          <option value="Photoshoot Services">Photoshoot Services</option>
+          <option value="Special Events Coverage">Special Events Coverage</option>
+        </select>
+      </label>
+    </div>
+    <div class="col-12 col-sm-6">
+      <label>
+        Session Date:
+        <div class="date" id="date1" data-target-input="nearest">
+          <input type="text"
+            name="session_date"
+            class="form-control border-0 datetimepicker-input"
+            placeholder="Session Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
+        </div>
+      </label>
+    </div>
+    <div class="col-12">
+      <label>
+        Additional Requests:
+        <textarea name="additional_requests" class="form-control border-0" placeholder="Additional Requests"></textarea>
+      </label>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+    </div>
+  </div>
+</form>
+
                 </div>
             </div>
         </div>
